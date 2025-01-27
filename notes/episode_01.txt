@@ -1,0 +1,44 @@
+Ques 1. What is CDN?
+A CDN (Content Delivery Network) is a network of geographically distributed servers that work together to deliver digital content (such as images, videos, JavaScript, CSS files, etc.) to users in a fast and efficient manner. The key goal of a CDN is to reduce latency and improve loading speeds by serving content from a server that is physically closer to the user.
+
+Ques 2. How CDN works?
+When a user makes a request for content (like visiting a website or downloading a file), the CDN directs that request to the nearest server in the network. These servers are called edge servers, and they store copies of your content. By serving content from a nearby server instead of a centralized one, CDNs can significantly reduce load times.
+
+Ques 3. What is CORS?
+CORS (Cross-Origin Resource Sharing) is a security feature implemented by web browsers to control how resources (like APIs, images, scripts, etc.) on a web page can be requested from a domain different from the one that served the web page. It’s designed to prevent malicious websites from accessing resources that they shouldn't, but it also allows legitimate cross-origin requests when configured properly.
+
+Ques 4. What is crossorigin?
+The crossorigin attribute is typically applied to external resources that are fetched by a web page, like images, scripts, or stylesheets. It tells the browser whether to include credentials (such as cookies or HTTP authentication) and how to handle the cross-origin request.
+
+Ques 5. What is React?
+React is a popular open-source JavaScript library for building user interfaces (UI), particularly for single-page applications (SPAs). It was developed by Facebook (now Meta) and is maintained by Facebook and a large community of developers. React enables developers to build interactive, dynamic, and efficient web applications by creating reusable UI components.
+
+Ques 6. What is features of React?
+Component-Based Architecture: React encourages the development of applications using components, which are self-contained, reusable units of code that define how the UI should look and behave. A component can be as simple as a button or as complex as an entire page or section of an app.
+Delarative UI: React uses a declarative approach to building UIs. Instead of manually manipulating the DOM, you describe what the UI should look like in a given state, and React takes care of updating the UI to match that state.
+Virtual DOM: React uses a Virtual DOM to improve performance. The Virtual DOM is a lightweight representation of the actual DOM in memory. When the state of a component changes, React first updates the Virtual DOM, then compares it to the real DOM using a process called reconciliation. This allows React to make efficient updates by only changing the parts of the DOM that have actually changed.
+JSX (JavaScript XML): React uses JSX, a syntax extension that allows you to write HTML-like code within JavaScript. JSX combines the declarative nature of HTML with the power of JavaScript, making it easier to build complex UIs.
+
+Ques 7. What is difference in the react.development.js and react-dom.development.js files?
+react.development.js file contains the core React library, which is responsible for managing the logic and state of your application. It provides the functions and mechanisms for building components, managing state and props, handling hooks, and more. It is focused on rendering components and managing the internal state and lifecycle of those components.
+
+react-dom.development.js file is responsible for rendering React components to the DOM (the actual web page) and handling the interactions between React and the browser. This file bridges the gap between React's internal logic and the real DOM in the browser.
+
+Ques How to create nested HTML structure?
+<div id="parent">
+    <div id="children">
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+    </div>
+</div>
+
+// const heading = React.createElement("h1", { class:"heading", id: "heading" }, "Hello World!"); 
+// firstArgument: tag, secondArgument: attributes, thirdArgument: content
+
+const html = React.createElement("div", {id:"parent"}, React.createElement("div", {id:"children"}, [
+    React.createElement("h1", {}, "Heading 1"),
+    React.createElement("h2", {}, "Heading 2"),
+]));
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(html);

@@ -1,0 +1,51 @@
+Ques 1. What is npm?
+npm does not stands for Node Package Manager, but npm is a package manager for javascript programming language maintained by npm Inc. npm is the default package manager for the javascript runyime environment Node.js.
+
+Ques 2. What is package.json?
+package.json is a configuration for npm. It is used to manage project dependencies, scripts, and metadata.
+
+Ques 3. What is package-lock.json? 
+It ensures that everyone working on the project uses exactly the same versions of dependencies, regardless of what is specified in package.json. For example, if package.json allows for any version of a package that matches a version range (like ^1.0.0), the package-lock.json locks that package down to a specific version, like 1.0.2. This ensures consistency across different environments or machines.
+
+Ques 4. What is ^ and ~ prefix in package name?
+The ^ prefix allows updates to the most recent minor or patch version, but not a major version. It’s the most common way to specify version ranges because it gives a good balance between flexibility and stability.
+The ~ prefix allows updates to the most recent patch version, but not a minor or major version. This is a more conservative option, as it limits updates to just bug fixes and minor improvements.
+
+Ques 4. What is node modules?
+node_modules is the directory in a Node.js project where npm (or Yarn) installs all of the project’s dependencies. It contains all the packages (both direct and transitive) that your project needs to run or develop, and it’s created when you run npm install.
+
+Ques 5. Transitive dependecies?
+Transitive dependencies are the dependencies of your project's direct dependencies. In simpler terms, when you install a package in your project, that package might also require other packages to function properly. Those additional required packages are called transitive dependencies.
+
+Ques 6. What is bundler (Webpack, Parcel, Vite)?
+A bundler is a tool that takes all the individual files (such as JavaScript, CSS, images, etc.) in your project and combines them into a single (or a few) optimized files that can be served to the browser or used in a production environment. This process is called bundling, and it helps to improve performance, simplify deployment, and manage dependencies more efficiently.
+
+Ques 7. How to configure parcel in a react app?
+npm install -D parcel
+There are two types of dependencies that can be installed
+dev Required in development only
+normal used in both dev+production
+
+"devDependencies": {
+    "parcel": "^2.13.3"
+}
+
+Ques 8. Why parcel?
+=> Zero Config
+=> Dev Build
+=> Local Server
+=> File watching algorithm (C++)
+=> HMR - Hot Module Replacement
+=> Reliable Caching - Faster Builds
+=> Image Optimization
+=> File Minification
+=> Bundle 
+=> File Compression
+=> Consistant Hashing
+=> Code Spliting
+=> Differential Bundling - Support to older browsers
+=> Workers
+=> Diagonstics
+=> Error Handling
+=> Tree Shaking
+=> HTTPs
